@@ -12,4 +12,10 @@ class Band
     def self.all
         @@all
     end
+    def concerts
+        a = Concert.all.select{|con| con.band == self }
+   
+    end
 end
+
+binding.pry

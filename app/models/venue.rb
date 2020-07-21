@@ -12,4 +12,14 @@ class Venue
     def self.all
         @@all
     end
+
+    def concerts
+        a = Concert.all.select{|con| con.vanue == self }
+    end
+
+    def bands
+        a = Concert.all.select{|con| con.vanue == self } 
+        a.map{|ban|ban.band}
+    end
 end
+binding.pry
