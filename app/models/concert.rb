@@ -27,21 +27,20 @@ class Concert
             a = Concert.all.select{|con| con == self }
             a[0].vanue
         end
-
+        #Concert#hometown_show?
+        #returns true if the concert is in the band's hometown, false if it is not
         def hometown_show?
             self.band.hometown == self.vanue.city
         end
 
-        
-    def self.all_introductions
-      
-
-
-		self.all.each { |conce|
-        puts "Hello #{vanue.city}!!!!!, we are #{band.name} 
-        and we're from #{band.hometown}"}
-     
-	end
+        #Concert#introduction
+        #returns a string with the band's introduction for this concert
+        #an introduction is in the form: "Hello {insert city name here}!!!!!, we are {insert band name here} and we're from {insert hometown here}"   
+        def introductions
+        a = Concert.all.select { |conce|conce == self }
+        puts "Hello #{a[0].vanue.city}!!!!!, we are #{a[0].band.name} 
+        and we're from #{a[0].band.hometown}"
+        end
     end
     
     binding.pry

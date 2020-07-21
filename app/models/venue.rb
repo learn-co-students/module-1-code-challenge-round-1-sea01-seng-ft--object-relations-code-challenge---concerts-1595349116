@@ -21,5 +21,22 @@ class Venue
         a = Concert.all.select{|con| con.vanue == self } 
         a.map{|ban|ban.band}
     end
+
+    #Venue#concert_on(date)
+#takes a date (string) as argument
+#finds and returns the first concert on that date at that venue
+#if there is no concert on that date at that venue, returns nil
+
+def concert_on(date)
+  
+Concert.all.find{|conce| conce.date == date}
+
+end
+#Venue#most_frequent_band
+#returns the band with the most concerts at the venue
+def most_frequent_band
+    @@all.max_by {|ban| ban.Venue.all.count}
+end
+
 end
 binding.pry
