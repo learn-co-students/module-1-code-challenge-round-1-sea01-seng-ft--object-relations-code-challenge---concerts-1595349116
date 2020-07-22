@@ -43,4 +43,4 @@ class Concert
         end
     end
     
-    binding.pry
+ 

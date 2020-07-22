@@ -35,8 +35,10 @@ end
 #Venue#most_frequent_band
 #returns the band with the most concerts at the venue
 def most_frequent_band
-    @@all.max_by {|ban| ban.Venue.all.count}
+
+    @@all.max_by {|ban| ban.bands.length }
+ 
+    
 end
 
 end
-binding.pry

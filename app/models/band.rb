@@ -21,7 +21,8 @@ class Band
 #takes a venue and date (as a string) as arguments, and 
 #creates a new concert for the band in that venue on that date
 def venue(venue,date)
-    Concert.new(date,self,venue)
+    vanue1 = Venue.new("",venue)
+    Concert.new(date,self,vanue1)
 end
 
 #Band#all_introductions
@@ -36,4 +37,3 @@ def all_introductions
 end
 
 
-binding.pry
