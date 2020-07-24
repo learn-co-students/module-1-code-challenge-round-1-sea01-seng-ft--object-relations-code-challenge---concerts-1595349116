@@ -17,9 +17,12 @@ liberty = Venue.new("Liberty","NY")
 bandstand = Venue.new("Bandstand","Mumbai")
 
 #(date,band,vanue)
-concert1 = Concert.new("07/21/2020",hiphop,timesquare)
+concert1 = Concert.new("07/21/2020",hiphop,bandstand)
 concert2 = Concert.new("07/21/2020",hiphop,liberty)
-concert1 = Concert.new("07/21/2020",gullyboy,bandstand)
-
+concert3 = Concert.new("07/21/2020",gullyboy,bandstand)
+concert4 = Concert.new("07/21/2020",hiphop,timesquare)
+concert5 = Concert.new("07/21/2020",gullyboy,bandstand)
+concert6 = Concert.new("07/21/2020",gullyboy,bandstand)
+concert7 = Concert.new("07/21/2020",gullyboy,bandstand)
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line

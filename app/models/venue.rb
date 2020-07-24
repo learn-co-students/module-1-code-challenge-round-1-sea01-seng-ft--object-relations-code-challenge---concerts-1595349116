@@ -18,8 +18,9 @@ class Venue
     end
 
     def bands
-        a = Concert.all.select{|con| con.vanue == self } 
-        a.map{|ban|ban.band}
+        concerts.collect { |con|con.band } 
+        #a = Concert.all.select{|con| con.vanue == self } 
+        #a.map{|ban|ban.band}
     end
 
     #Venue#concert_on(date)
@@ -35,10 +36,10 @@ end
 #Venue#most_frequent_band
 #returns the band with the most concerts at the venue
 def most_frequent_band
-
-    @@all.max_by {|ban| ban.bands.length }
- 
-    
-end
-
+binding.pry   
+bands.max_by{|ban| ban.concerts.count}
+#a = self.bands.reduce({}) { |count, band| count[band] ||= 0 && count[band] += 1 }
+    #a.max_by{|band|band.concerts.count}
+    #Venue.all.max_by{|venue|venue.concerts.count}
+end    
 end

@@ -16,17 +16,18 @@ class Concert
 
     #Concert#band
     #should return the Band instance for this concert
-        def bandg
-         a = Concert.all.select{|con| con == self }
-         a[0].band
-        end
+      #  def band
+       #     @band
+         #a = Concert.all.select{|con| con == self }@band
+         #a[0].band
+    #    end
     
         #Concert#venue
         #should return the Venue instance for this concert
-           def venuee
-            a = Concert.all.select{|con| con == self }
-            a[0].vanue
-        end
+    #       def venuee
+            #a = Concert.all.select{|con| con == self }
+           # a[0].vanue
+     #   end
         #Concert#hometown_show?
         #returns true if the concert is in the band's hometown, false if it is not
         def hometown_show?

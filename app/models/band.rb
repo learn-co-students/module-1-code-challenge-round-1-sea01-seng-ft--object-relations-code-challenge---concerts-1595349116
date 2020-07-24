@@ -20,9 +20,9 @@ class Band
     #Band#play_in_venue(venue, date)
 #takes a venue and date (as a string) as arguments, and 
 #creates a new concert for the band in that venue on that date
-def venue(venue,date)
-    vanue1 = Venue.new("",venue)
-    Concert.new(date,self,vanue1)
+def play_in_venue(vanue,date)
+   # vanue1 = Venue.new("",venue)
+    Concert.new(date,self,vanue)
 end
 
 #Band#all_introductions
@@ -30,7 +30,7 @@ end
 #each introduction is in the form "Hello {insert city name here}!!!!!, 
 #we are {insert band name here} and we're from {insert hometown here}"
 def all_introductions
-    a = Concert.all.select { |conce|conce.band == self }
+    a = Concert.all.each { |conce|conce.band == self }
     puts "Hello #{a[0].vanue.city}!!!!!, we are #{a[0].band.name} 
     and we're from #{a[0].band.hometown}"
     end
